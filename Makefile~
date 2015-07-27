@@ -26,7 +26,7 @@
 #Add iso code for any locales you want to support here (space separated)
 # default is no locales
 # LOCALES = af
-LOCALES = sv
+LOCALES = sv no
 
 # If locales are enabled, set the name of the lrelease binary on your system. If
 # you have trouble compiling the translations, you may have to specify the full path to
@@ -48,7 +48,7 @@ PY_FILES = \
 
 #UI_FILES = lmOpenData_dialog_base.ui
 
-EXTRAS = lm.png metadata.txt
+EXTRAS = icon.png metadata.txt
 
 COMPILED_RESOURCE_FILES = resources_rc.py
 

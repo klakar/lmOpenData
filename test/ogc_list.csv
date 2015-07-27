@@ -1,0 +1,4 @@
+#### List with OGC layers  "source","name","service"
+"contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=http://maps-open.lantmateriet.se/open/topowebb-ccby/v1/wmts?request%3DGetCapabilities%26version%3D1.0.0%26service%3Dwmts","Lantmäteriet Topografisk","wms"
+
+

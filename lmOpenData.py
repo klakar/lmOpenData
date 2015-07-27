@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 /***************************************************************************
- lantmateridata
+ lmOpenData
                                  A QGIS plugin
  Open Data Lantmäteriet (SWE)
                               -------------------
@@ -31,7 +31,7 @@ import codecs
 # Initialize Qt resources from file resources.py
 import resources_rc
 # Import the code for the dialog
-from lmOpenData_dialog import lantmateridataDialog
+# from lmOpenData_dialog import lantmateridataDialog
 import os.path
 
 
@@ -52,10 +52,7 @@ class lantmateridata:
         self.plugin_dir = os.path.dirname(__file__)
         # initialize locale
         locale = QSettings().value('locale/userLocale')[0:2]
-        locale_path = os.path.join(
-            self.plugin_dir,
-            'i18n',
-            'lantmateridata_{}.qm'.format(locale))
+        locale_path = os.path.join(self.plugin_dir, 'i18n', '{}.qm'.format(locale))
 
         if os.path.exists(locale_path):
             self.translator = QTranslator()
@@ -65,14 +62,14 @@ class lantmateridata:
                 QCoreApplication.installTranslator(self.translator)
 
         # Create the dialog (after translation) and keep reference
-        self.dlg = lantmateridataDialog()
+        # self.dlg = lantmateridataDialog()
 
         # Declare instance attributes
         self.actions = []
-        self.menu = self.tr(u'&Lantmäteriet OpenData')
+        self.menu = self.tr("&LM OpenData")
         # TODO: We are going to let the user set this up in a future iteration
-        self.toolbar = self.iface.addToolBar(u'lantmateridata')
-        self.toolbar.setObjectName(u'lantmateridata')
+        self.toolbar = self.iface.addToolBar(u'LM OpenData')
+        self.toolbar.setObjectName(u'LM OpenData')
 
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
@@ -87,7 +84,7 @@ class lantmateridata:
         :rtype: QString
         """
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
-        return QCoreApplication.translate('lantmateridata', message)
+        return QCoreApplication.translate("LM_OpenData", message)
 
 
     def add_action(
@@ -166,10 +163,10 @@ class lantmateridata:
     def initGui(self):
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
 
-        icon_path = ':/plugins/lantmateridata/lm.png'
+        icon_path = ":/plugins/lmOpenData/lm.png"
         self.add_action(
             icon_path,
-            text=self.tr(u'Topografisk Karta'),
+            text=self.tr("Topographic"),
             callback=self.run,
             parent=self.iface.mainWindow())
 
@@ -178,7 +175,7 @@ class lantmateridata:
         """Removes the plugin menu item and icon from QGIS GUI."""
         for action in self.actions:
             self.iface.removePluginWebMenu(
-                self.tr(u'&LM OpenData'),
+                self.tr("&LM OpenData"),
                 action)
             self.iface.removeToolBarIcon(action)
         # remove the toolbar
@@ -188,9 +185,9 @@ class lantmateridata:
     def run(self):
         """Run method that performs all the real work"""
         # My Code (lmOD)
-	layer = QgsRasterLayer("contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=http://maps-open.lantmateriet.se/open/topowebb-ccby/v1/wmts?request%3DGetCapabilities%26version%3D1.0.0%26service%3Dwmts",u"Lantmäteriet","wms")
+	layer = QgsRasterLayer("contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=http://maps-open.lantmateriet.se/open/topowebb-ccby/v1/wmts?request%3DGetCapabilities%26version%3D1.0.0%26service%3Dwmts",self.tr(u"LM Topographic"),"wms")
 	if not layer.isValid():
-		QMessageBox.information(self.iface.mainWindow(),u"Error!", u"%s is not a valid layer:")
+		QMessageBox.information(self.iface.mainWindow(),self.tr(u"Error!"), self.tr(u"%s is not a valid layer:"))
 	QgsMapLayerRegistry.instance().addMapLayer(layer)
         # Do something useful here - delete the line containing pass and
         # substitute with your code.
