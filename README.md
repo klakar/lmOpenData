@@ -1,5 +1,4 @@
 ![GitHub Logo](/lm.png)
-Format: ![Alt Text](url)
 #Installation Instructions
 Download and unzip in your QGIS plug-ins folder...
 Activate the plug-in and add layer from "Web" menu.
