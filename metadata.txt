@@ -19,7 +19,7 @@ email=klaskarlsson@hotmail.com
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=0.1 First local version\n0.2 First on-line version 2015-07-24
+changelog=0.1 First local version<br>0.2 First on-line version 2015-07-24 (soon)
 
 # Tags are comma separated with spaces allowed
 tags=
