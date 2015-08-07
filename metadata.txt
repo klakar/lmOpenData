@@ -10,7 +10,7 @@
 name=LM OpenData
 qgisMinimumVersion=2.0
 description=Open Data Lantmäteriet (SWE)
-version=0.2
+version=0.2.1
 author=Geosupportsystem.wordpress.com
 email=klaskarlsson@hotmail.com
 
