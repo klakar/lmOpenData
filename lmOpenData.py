@@ -185,7 +185,7 @@ class lantmateridata:
     def run(self):
         """Run method that performs all the real work"""
         # My Code (lmOD)
-	layer = QgsRasterLayer("contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=http://maps-open.lantmateriet.se/open/topowebb-ccby/v1/wmts?request%3DGetCapabilities%26version%3D1.0.0%26service%3Dwmts",self.tr(u"LM Topographic"),"wms")
+	layer = QgsRasterLayer("contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/4622b0668d53883d7b808ccd7c33f4ae/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities",self.tr(u"LM TopoWebb API"),"wms")
 	if not layer.isValid():
 		QMessageBox.information(self.iface.mainWindow(),self.tr(u"Error!"), self.tr(u"%s is not a valid layer:"))
 	QgsMapLayerRegistry.instance().addMapLayer(layer)
