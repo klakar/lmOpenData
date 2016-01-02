@@ -30,7 +30,7 @@ repository=https://github.com/klakar/lmOpenData
 category=Web
 icon=lm.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
