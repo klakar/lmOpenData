@@ -2,7 +2,7 @@
 #Installation Instructions
 Download and unzip in your QGIS plugins folder...
 
-IMPORTANT: Change the API key in "LmOpenData.py" to your own personal key!!!
+IMPORTANT: Change the API key in "LmOpenData.py" to your own personal key!!! (Row 188)
 
 Activate the plug-in and add layer from "Web" menu.
 
