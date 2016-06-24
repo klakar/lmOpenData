@@ -1,6 +1,9 @@
 ![GitHub Logo](/lm.png)
 #Installation Instructions
 Download and unzip in your QGIS plugins folder...
+
+IMPORTANT: Change the API key in "LmOpenData.py" to your own personal key!!!
+
 Activate the plug-in and add layer from "Web" menu.
 
 ####Change log:
