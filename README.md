@@ -7,7 +7,7 @@ Change the folder name from "LmOpenData-master" to just "LmOpenData".
 #####IMPORTANT: 
 Change the API key in the "LmOpenData.py" file to your own personal key!!! (Row 188)
 
-Register at: https://opendata.lantmateriet.se/#register
+Register at: https://opendata.lantmateriet.se/#apis
 
 Activate the plug-in and add layer from "Web" menu.
 
