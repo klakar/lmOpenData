@@ -5,7 +5,7 @@ Download and unzip in your QGIS plugins folder...
 Change the folder name from "LmOpenData-master" to just "LmOpenData".
 
 #####IMPORTANT: 
-Change the API key in "LmOpenData.py" to your own personal key!!! (Row 188)
+Change the API key in the "LmOpenData.py" file to your own personal key!!! (Row 188)
 
 Register at: https://opendata.lantmateriet.se/#register
 
