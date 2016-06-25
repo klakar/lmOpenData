@@ -2,7 +2,11 @@
 #Installation Instructions
 Download and unzip in your QGIS plugins folder...
 
-IMPORTANT: Change the API key in "LmOpenData.py" to your own personal key!!! (Row 188)
+Change the folder name from "LmOpenData-master" to just "LmOpenData".
+
+#####IMPORTANT: 
+Change the API key in "LmOpenData.py" to your own personal key!!! (Row 188)
+Register at: https://opendata.lantmateriet.se/#register
 
 Activate the plug-in and add layer from "Web" menu.
 
@@ -15,4 +19,4 @@ Version|Change
 0.1|First version (local)
 
 ###Problem solving
-If you get a "Broken Plug-In" message you can try to remove the "-master" part from the folder name. (Python sometimes don't like "-" )
+If you get a "Broken Plug-In" message you probably did not remove the "-master" part from the folder name. (Python sometimes don't like "-" )
