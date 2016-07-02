@@ -97,7 +97,6 @@ class LmOpenData:
         if not layer.isValid():
         	 QMessageBox.information(self.iface.mainWindow(),self.tr(u"Error!"), self.tr(u"Layer has no valid token... Try again!"))
         	 QSettings().setValue('lmopendata/token', '') # if layer is incorrect clear token key
-        	 #iface.messageBar().pushMessage("String", layer_string, level=QgsMessageBar.INFO)
         QgsMapLayerRegistry.instance().addMapLayer(layer)
 
     def add_action(
@@ -208,10 +207,10 @@ class LmOpenData:
             QSettings().setValue( 'lmopendata/token', lm_token )
           else:
           	return
-        #lm_token = '4622b0668d53883d7b808ccd7c33f4ae' # Debug... Remove to try on...  	
         layer_string = "contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/" + lm_token + "/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities"
         self.add_layer(
           layer_string,
-          u"LM Topographic")
-        #QSettings().setValue( 'lmopendata/token', '')
-        
+          self.tr(u"LM Topographic"))
+        #QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
+                
+                
