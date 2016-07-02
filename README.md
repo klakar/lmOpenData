@@ -12,7 +12,7 @@ Change the folder name from "LmOpenData-xxxx" to just "LmOpenData".
 #####IMPORTANT: 
 You will need a personal Swedish National Land Survey Token to use the plugin.
 
-Register at: https://opendata.lantmateriet.se/#apis
+Register (free) at: https://opendata.lantmateriet.se/#apis
 
 Activate the plug-in and add layer from "Web" menu.
 
