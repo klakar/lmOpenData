@@ -209,7 +209,7 @@ class LmOpenData:
         self.add_layer(
           layer_string,
           self.tr(u"LM Topographic CC-BY"))
-        QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
+        #QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
                 
                 
                 
