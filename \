@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="sv_SE" sourcelanguage="">
+<!DOCTYPE TS><TS version="2.0">
 <context>
     <name>LmOpenData</name>
     <message>
         <location filename="lm_open_data.py" line="188"/>
         <source>&amp;LM Open Data WMTS</source>
-        <translation>&amp;LM Öppna Data WMTS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data.py" line="97"/>
         <source>Error!</source>
-        <translation>Fel!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data.py" line="97"/>
         <source>Layer has no valid token... Try again!</source>
-        <translation>Saknar giltig token... Försök igen!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data.py" line="178"/>
         <source>Topographic Map</source>
-        <translation>Topografisk Karta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data.py" line="210"/>
         <source>LM Topographic</source>
-        <translation>LM Topografisk</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -33,17 +33,17 @@
     <message>
         <location filename="lm_open_data_dialog_base.ui" line="14"/>
         <source>LM Open Data WMTS</source>
-        <translation>LM Öppna Data WMTS</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data_dialog_base.ui" line="42"/>
         <source>Personal Swedish National Land Survey Token Key:</source>
-        <translation>Personlig Token från Lantmäteriet</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="lm_open_data_dialog_base.ui" line="55"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Get Token at: &lt;a href=&quot;https://opendata.lantmateriet.se/#register&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://opendata.lantmateriet.se/#register&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Registrera dig: &lt;a href=&quot;https://opendata.lantmateriet.se/#register&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://opendata.lantmateriet.se/#register&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
