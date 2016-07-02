@@ -24,9 +24,7 @@ from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
 from PyQt4.QtGui import QAction, QIcon, QMessageBox
 
 #My Imports
-from qgis.core import *
-from qgis.utils import *
-import codecs
+from qgis.core import QgsRasterLayer, QgsMapLayerRegistry
 
 # Initialize Qt resources from file resources.py
 import resources
@@ -88,12 +86,13 @@ class LmOpenData:
         # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
         return QCoreApplication.translate('LmOpenData', message)
         
+    # Add a WMTS layer from a QGIS layer source string and give it a layer name
     def add_layer(
         self,
         layer_source,
         layer_name):
         layer = QgsRasterLayer(layer_source,self.tr(layer_name),"wms")
-        if not layer.isValid():
+        if not layer.isValid(): # Test if string is valid
         	 QMessageBox.information(self.iface.mainWindow(),self.tr(u"Error!"), self.tr(u"Layer has no valid token... Try again!"))
         	 QSettings().setValue('lmopendata/token', '') # if layer is incorrect clear token key
         QgsMapLayerRegistry.instance().addMapLayer(layer)
@@ -194,8 +193,8 @@ class LmOpenData:
 
     def run(self):
         """Run method that performs all the real work"""
-        lm_token = QSettings().value('lmopendata/token')
-        if lm_token == '': # if settings key is empty show dialog
+        lm_token = QSettings().value('lmopendata/token') # Get any value from the stored value key
+        if lm_token == '': # if key is empty show dialog
           #self.dlg.tokentext.setText(lm_token)
           self.dlg.show()
           result = self.dlg.exec_()
@@ -205,12 +204,12 @@ class LmOpenData:
             lm_token = str(self.dlg.tokentext.text())
             QSettings().setValue( 'lmopendata/token', lm_token )
           else:
-          	return
+          	return # If dialog is aborted, do nothing!
         layer_string = "contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/" + lm_token + "/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities"
         self.add_layer(
           layer_string,
-          self.tr(u"LM Topographic"))
-        #QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
+          self.tr(u"LM Topographic CC-BY"))
+        QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
                 
                 
                 

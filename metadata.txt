@@ -4,17 +4,19 @@
 # embedding metadata in __init__.py will 
 # is no longer supported since version 2.0.
 
-# This file should be included when you package your plugin.# Mandatory items:
+# This file should be included when you package your plugin.
+
+# Mandatory items:
 
 [general]
 name=LM Open Data WMTS
 qgisMinimumVersion=2.0
 description=Swedish National Land Survey Open WMTS layers
-version=0.3.1
+version=0.3.2
 author=Klas Karlsson
 email=klaskarlsson@hotmail.com
 
-about=This plugin makes it easy to add Swedish National Land Survey WMTS layers to your QGIS project. You will need a National Land Survey "token" key which you can get at https://opendata.lantmateriet.se/#register.
+about=This plugin makes it easy to add <b>Swedish National Land Survey</b> WMTS layers to your QGIS project. You will need a National Land Survey <i>"token"</i> key which you can get at <a href="https://opendata.lantmateriet.se/#register">https://opendata.lantmateriet.se/#register</a>.<br><br>Map layers are Open Source Licensed with <i>CC BY Lantmäteriet</i> (<a href="http://www.lantmateriet.se/sv/Kartor-och-geografisk-information/Kartor/oppna-data/villkor/">License</a>).<br><br>The National Land Survey do <u>not</u> support this plugin!
 
 tracker=https://github.com/klakar/lmOpenData
 repository=https://github.com/klakar/lmOpenData
@@ -23,10 +25,11 @@ repository=https://github.com/klakar/lmOpenData
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=0.1 First local version<br>0.2 First on-line version 2015-07-24 (soon)<br>0.2.2 Modified for new token API<br>0.3 New GUI and personal Token requirement<br>0.3.1 Fixed Translation of plugin
+changelog=0.3.2 Initial preparations for QGIS 3.0<br>0.3.1 Fixed Translation of plugin<br>0.3 New GUI and personal Token requirement<br>0.2.2 Modified for new token API<br>0.2 First on-line version 2015-07-24 (soon)<br>0.1 First local version
+
 
 # Tags are comma separated with spaces allowed
-tags=
+tags=Open Data,Sweden,Sverige,Lantmäteriet
 
 homepage=https://github.com/klakar/lmOpenData
 category=Web

@@ -3,29 +3,29 @@
 <context>
     <name>LmOpenData</name>
     <message>
-        <location filename="lm_open_data.py" line="188"/>
+        <location filename="lm_open_data.py" line="187"/>
         <source>&amp;LM Open Data WMTS</source>
         <translation>&amp;LM Öppna Data WMTS</translation>
     </message>
     <message>
-        <location filename="lm_open_data.py" line="97"/>
+        <location filename="lm_open_data.py" line="96"/>
         <source>Error!</source>
         <translation>Fel!</translation>
     </message>
     <message>
-        <location filename="lm_open_data.py" line="97"/>
+        <location filename="lm_open_data.py" line="96"/>
         <source>Layer has no valid token... Try again!</source>
         <translation>Saknar giltig token... Försök igen!</translation>
     </message>
     <message>
-        <location filename="lm_open_data.py" line="178"/>
+        <location filename="lm_open_data.py" line="177"/>
         <source>Topographic Map</source>
         <translation>Topografisk Karta</translation>
     </message>
     <message>
-        <location filename="lm_open_data.py" line="210"/>
-        <source>LM Topographic</source>
-        <translation>LM Topografisk</translation>
+        <location filename="lm_open_data.py" line="209"/>
+        <source>LM Topographic CC-BY</source>
+        <translation>LM Topografisk CC-BY Lantmäteriet</translation>
     </message>
 </context>
 <context>
