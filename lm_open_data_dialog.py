@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 /***************************************************************************
- LmOpenData
+ LmOpenDataDialog
                                  A QGIS plugin
  Swedish National Land Survey Open WMTS layers
                              -------------------
         begin                : 2016-07-01
+        git sha              : $Format:%H$
         copyright            : (C) 2016 by Klas Karlsson
         email                : klaskarlsson@hotmail.com
-        git sha              : $Format:%H$
  ***************************************************************************/
 
 /***************************************************************************
@@ -19,17 +19,28 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
- This script initializes the plugin, making it known to QGIS.
 """
 
+import os
 
-# noinspection PyPep8Naming
-def classFactory(iface):  # pylint: disable=invalid-name
-    """Load LmOpenData class from file LmOpenData.
+from PyQt4 import QtGui, uic
+from PyQt4.QtCore import QSettings
 
-    :param iface: A QGIS interface instance.
-    :type iface: QgsInterface
-    """
-    #
-    from .lm_open_data import LmOpenData
-    return LmOpenData(iface)
+
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'lm_open_data_dialog_base.ui'))
+
+
+class LmOpenDataDialog(QtGui.QDialog, FORM_CLASS):
+    def __init__(self, parent=None):
+        """Constructor."""
+        super(LmOpenDataDialog, self).__init__(parent)
+        # Set up the user interface from Designer.
+        # After setupUI you can access any designer object by doing
+        # self.<objectname>, and you can use autoconnect slots - see
+        # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
+        # #widgets-and-dialogs-with-auto-connect
+        self.setupUi(self)
+        
+        # Read token key
+        self.tokentext.setText( QSettings().value('lmopendata/token') )

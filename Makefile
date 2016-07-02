@@ -1,11 +1,11 @@
 #/***************************************************************************
-# lantmateridata
+# LmOpenData
 #
-# Open Data Lantmäteriet (SWE)
+# Swedish National Land Survey Open WMTS layers
 #							 -------------------
-#		begin				: 2015-07-07
+#		begin				: 2016-07-01
 #		git sha				: $Format:%H$
-#		copyright			: (C) 2015 by Geosupportsystem.wordpress.com
+#		copyright			: (C) 2016 by Klas Karlsson
 #		email				: klaskarlsson@hotmail.com
 # ***************************************************************************/
 #
@@ -26,33 +26,33 @@
 #Add iso code for any locales you want to support here (space separated)
 # default is no locales
 # LOCALES = af
-LOCALES = sv
+LOCALES =
 
 # If locales are enabled, set the name of the lrelease binary on your system. If
 # you have trouble compiling the translations, you may have to specify the full path to
 # lrelease
-#LRELEASE = /usr/bin/lrelease
-LRELEASE = lrelease-qt4
+#LRELEASE = lrelease
+#LRELEASE = lrelease-qt4
 
 
 # translation
 SOURCES = \
 	__init__.py \
-	lmOpenData.py
+	lm_open_data.py lm_open_data_dialog.py
 
-PLUGINNAME = lmOpenData
+PLUGINNAME = LmOpenData
 
 PY_FILES = \
-	lmOpenData.py \
-	__init__.py
+	__init__.py \
+	lm_open_data.py lm_open_data_dialog.py
 
-#UI_FILES = lmOpenData_dialog_base.ui
+UI_FILES = lm_open_data_dialog_base.ui
 
 EXTRAS = lm.png metadata.txt
 
-COMPILED_RESOURCE_FILES = resources_rc.py
+COMPILED_RESOURCE_FILES = resources.py
 
-PEP8EXCLUDE=pydev,resources_rc.py,conf.py,third_party,ui
+PEP8EXCLUDE=pydev,resources.py,conf.py,third_party,ui
 
 
 #################################################
@@ -71,8 +71,8 @@ default: compile
 
 compile: $(COMPILED_RESOURCE_FILES)
 
-%_rc.py : %.qrc $(RESOURCES_SRC)
-	pyrcc4 -o $*_rc.py  $<
+%.py : %.qrc $(RESOURCES_SRC)
+	pyrcc4 -o $*.py  $<
 
 %.qm : %.ts
 	$(LRELEASE) $<
@@ -105,7 +105,7 @@ deploy: compile doc transcompile
 	# $HOME/$(QGISDIR)/python/plugins
 	mkdir -p $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(PY_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
-	#cp -vf $(UI_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
+	cp -vf $(UI_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(COMPILED_RESOURCE_FILES) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vf $(EXTRAS) $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)
 	cp -vfr i18n $(HOME)/$(QGISDIR)/python/plugins/$(PLUGINNAME)

@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/plugins/LM-OpenData" >
-        <file>icon.png</file>
+    <qresource prefix="/plugins/LmOpenData" >
+        <file>lm.png</file>
     </qresource>
 </RCC>
