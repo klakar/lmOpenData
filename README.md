@@ -7,7 +7,7 @@ Use files from _Master_ or Stable Release (https://github.com/klakar/lmOpenData/
 
 Download and unzip in your QGIS plugins folder...
 
-Change the folder name from "LmOpenData-master" to just "LmOpenData".
+Change the folder name from "LmOpenData-xxxx" to just "LmOpenData".
 
 #####IMPORTANT: 
 You will need a personal Swedish National Land Survey Token to use the plugin.
