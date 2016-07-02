@@ -23,7 +23,7 @@ repository=https://github.com/klakar/lmOpenData
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=0.1 Initial version with Token support.
+changelog=0.1 First local version<br>0.2 First on-line version 2015-07-24 (soon)<br>0.2.2 Modified for new token API<br>0.3 New GUI and personal Token requirement
 
 # Tags are comma separated with spaces allowed
 tags=
