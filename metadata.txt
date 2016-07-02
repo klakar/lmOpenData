@@ -10,7 +10,7 @@
 
 [general]
 name=LM Open Data WMTS
-qgisMinimumVersion=2.0
+qgisMinimumVersion=2.2
 description=Swedish National Land Survey Open WMTS layers
 version=0.3.2
 author=Klas Karlsson
