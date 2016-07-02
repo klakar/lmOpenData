@@ -3,6 +3,8 @@
 
 Use QGIS official python plugin manager, or...
 
+Use files from _Master_ or Stable Release (https://github.com/klakar/lmOpenData/releases/latest)
+
 Download and unzip in your QGIS plugins folder...
 
 Change the folder name from "LmOpenData-master" to just "LmOpenData".
