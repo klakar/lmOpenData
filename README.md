@@ -27,3 +27,5 @@ Version|Change
 
 ###Problem solving
 If you get a "Broken Plug-In" message you probably did not remove the "-master" part from the folder name. (Python sometimes don't like "-" )
+
+Sometimes you need to add the token more than once. To avoid this you can add a second map layer the first time after you add the token.
