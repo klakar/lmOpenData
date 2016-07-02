@@ -1,11 +1,14 @@
 ![GitHub Logo](/lm.png)
 #Installation Instructions
+
+Use QGIS official python plugin manager, or...
+
 Download and unzip in your QGIS plugins folder...
 
 Change the folder name from "LmOpenData-master" to just "LmOpenData".
 
 #####IMPORTANT: 
-Change the API key in the "LmOpenData.py" file to your own personal key!!! (Row 188)
+You will need a personal Swedish National Land Survey Token to use the plugin.
 
 Register at: https://opendata.lantmateriet.se/#apis
 
@@ -14,6 +17,7 @@ Activate the plug-in and add layer from "Web" menu.
 ####Change log:
 Version|Change
 -------|------
+0.3|Remade Plugin to require personal token and registration.
 0.2.2|Changed to new token based API (My own token for now)
 0.2.1|Added some links to this repository
 0.2|Minor update
