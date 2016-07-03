@@ -23,6 +23,7 @@ Plugin is published under GPL2 license (same as QGIS).
 ####Change log:
 Version|Change
 -------|------
+0.3.3|Bug fix for initial python error about "incompatible types"
 0.3.2|Bug fix and added CC-BY Lantmäteriet license text.
 0.3.1|Translation Fix.
 0.3|Remade Plugin to require personal token and registration.
