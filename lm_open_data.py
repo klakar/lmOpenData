@@ -205,7 +205,7 @@ class LmOpenData:
             QSettings().setValue( 'lmopendata/token', lm_token )
           else:
           	return # If dialog is aborted, do nothing!
-        layer_string = "contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/" + lm_token + "/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities"
+        layer_string = "contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/" + str(lm_token) + "/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities"
         self.add_layer(
           layer_string,
           self.tr(u"LM Topographic CC-BY"))
