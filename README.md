@@ -16,6 +16,10 @@ Register (free) at: https://opendata.lantmateriet.se/#register
 
 Activate the plug-in and add layer from "Web" menu.
 
+#####License
+Layers are licensed with CC-BY "Lantmäteriet".
+Plugin is published under GPL2 license (same as QGIS).
+
 ####Change log:
 Version|Change
 -------|------
