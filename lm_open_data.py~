@@ -30,7 +30,7 @@ from qgis.core import QgsRasterLayer, QgsMapLayerRegistry
 # Initialize Qt resources from file resources.py
 from . import resources
 # Import the code for the dialog
-from .lm_open_data_dialog import LmOpenDataDialog
+from lm_open_data_dialog import LmOpenDataDialog
 import os.path
 
 

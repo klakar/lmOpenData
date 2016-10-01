@@ -31,7 +31,7 @@ FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'lm_open_data_dialog_base.ui'))
 
 
-class LmOpenDataDialog(QtWidgets.QDialog, FORM_CLASS):
+class LmOpenDataDialog(QtGui.QDialog, FORM_CLASS):
     def __init__(self, parent=None):
         """Constructor."""
         super(LmOpenDataDialog, self).__init__(parent)
