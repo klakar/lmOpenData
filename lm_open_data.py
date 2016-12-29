@@ -25,7 +25,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QAction, QMessageBox
 
 #My Imports
-from qgis.core import QgsRasterLayer, QgsMapLayerRegistry
+from qgis.core import QgsRasterLayer, QgsProject
 
 # Initialize Qt resources from file resources.py
 from . import resources
@@ -96,7 +96,7 @@ class LmOpenData:
         if not layer.isValid(): # Test if string is valid
         	 QMessageBox.information(self.iface.mainWindow(),self.tr(u"Error!"), self.tr(u"Layer has no valid token... Try again!"))
         	 QSettings().setValue('lmopendata/token', '') # if layer is incorrect clear token key
-        QgsMapLayerRegistry.instance().addMapLayer(layer)
+        QgsProject.instance().addMapLayer(layer)
 
     def add_action(
         self,
