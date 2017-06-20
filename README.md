@@ -9,18 +9,18 @@ Download and unzip in your QGIS plugins folder...
 
 Change the folder name from "LmOpenData-xxxx" to just "LmOpenData".
 
-#####IMPORTANT: 
+##### IMPORTANT: 
 You will need a personal Swedish National Land Survey Token to use the plugin.
 
 Register (free) at: https://opendata.lantmateriet.se/#register
 
 Activate the plug-in and add layer from "Web" menu.
 
-#####License
+##### License
 Layers are licensed with CC-BY "Lantmäteriet".
 Plugin is published under GPL2 license (same as QGIS).
 
-####Change log:
+#### Change log:
 Version|Change
 -------|------
 0.4.1|Minor fix with QgsMapLayerRegistry changed to QgsProject
@@ -34,7 +34,7 @@ Version|Change
 0.2|Minor update
 0.1|First version (local)
 
-###Problem solving
+### Problem solving
 If you get a "Broken Plug-In" message you probably did not remove the "-master" part from the folder name. (Python sometimes don't like "-" )
 
 Sometimes you need to add the token more than once. To avoid this you can add a second map layer the first time after you add the token.
