@@ -11,6 +11,7 @@
 [general]
 name=LM Open Data WMTS
 qgisMinimumVersion=2.99
+qgisMaximumVersion=3.98
 description=Swedish National Land Survey Open WMTS layers
 version=0.4.1
 author=Klas Karlsson
