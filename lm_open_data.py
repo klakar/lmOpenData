@@ -209,7 +209,7 @@ class LmOpenData:
         layer_string = "contextualWMSLegend=0&crs=EPSG:3006&dpiMode=7&featureCount=10&format=image/png&layers=topowebb&styles=default&tileMatrixSet=3006&url=https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/" + str(lm_token) + "/?SERVICE%3DWMTS%26REQUEST%3DGetCapabilities"
         self.add_layer(
           layer_string,
-          self.tr(u"LM Topographic CC-BY"))
+          self.tr(u"LM Topographic CC-0"))
         #QSettings().setValue( 'lmopendata/token', '')  # Debug code. Activate to clear token every time.
                 
                 
