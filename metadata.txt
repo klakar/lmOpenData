@@ -13,7 +13,7 @@ name=LM Open Data WMTS
 qgisMinimumVersion=2.99
 qgisMaximumVersion=3.98
 description=Swedish National Land Survey Open WMTS layers
-version=0.4.1
+version=0.4.2
 author=Klas Karlsson
 email=klaskarlsson@hotmail.com
 
@@ -26,7 +26,7 @@ repository=https://github.com/klakar/lmOpenData
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=0.4.1 Change QgsMapLayerRegistry to QgsProject<br>0.4 Update for QGIS 3.0 (2.99)<br>0.3.3 Bug fix, incompatible types<br>0.3.2 Initial preparations for QGIS 3.0<br>0.3.1 Fixed Translation of plugin<br>0.3 New GUI and personal Token requirement<br>0.2.2 Modified for new token API<br>0.2 First on-line version 2015-07-24 (soon)<br>0.1 First local version
+changelog=0.4.2 Change license to CC-0 for service<br>0.4.1 Change QgsMapLayerRegistry to QgsProject<br>0.4 Update for QGIS 3.0 (2.99)<br>0.3.3 Bug fix, incompatible types<br>0.3.2 Initial preparations for QGIS 3.0<br>0.3.1 Fixed Translation of plugin<br>0.3 New GUI and personal Token requirement<br>0.2.2 Modified for new token API<br>0.2 First on-line version 2015-07-24 (soon)<br>0.1 First local version
 
 
 # Tags are comma separated with spaces allowed
